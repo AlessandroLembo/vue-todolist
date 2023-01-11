@@ -26,8 +26,8 @@
                 <img src="logo_Boolean.png" alt="logo">
             </figure>
             <div class="search">
-                <input type="text" id="input-value" placeholder="Nuova task" v-model.trim="taskToDo">
-                <button class="add-items">Aggiungi</button>
+                <input type="text" id="input-value" placeholder="Nuova task" v-model="addTask.text">
+                <button class="add-items" type="button" @click="addNewTask">Aggiungi</button>
             </div>
             <div class="content">
                 <div class="todo-container">
@@ -39,7 +39,7 @@
                                 <span v-else >{{ task.text }}</span>
                             </li>
                           </ul>
-                          <i class="fa-solid fa-xmark" @click="deleteTasks(i)"></i>  
+                          <i class="fa-solid fa-xmark" @click="deleteTask(i)"></i>  
                         </div>
                         <hr>   
                     </div>

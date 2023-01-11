@@ -31,7 +31,10 @@ const app = Vue.createApp ({
     
     data(){
         return{
-           taskToDo: '', 
+           addTask: {
+             text: '',
+             done: false
+           },
            tasks: [
               {
                 text: 'Annaffiare le piante',
@@ -51,7 +54,7 @@ const app = Vue.createApp ({
               },
               {
                 text: 'Guardare un film',
-                done: false
+                done: false 
               },
 
            ]
@@ -59,8 +62,12 @@ const app = Vue.createApp ({
     },
 
     methods: {
-        deleteTasks(index){
+        deleteTask(index){
            this.tasks.splice(index, 1);
+        },
+
+        addNewTask(){
+            this.tasks.push(this.addTask);
         }
     }
 
