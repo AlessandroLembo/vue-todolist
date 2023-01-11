@@ -34,23 +34,23 @@ const app = Vue.createApp ({
            taskToDo: '', 
            tasks: [
               {
-                text: 'mario',
+                text: 'Annaffiare le piante',
                 done: true
               },
               {
-                text: 'ale',
+                text: 'Fare la spesa',
                 done: false
               },
               {
-                text: 'paolo',
+                text: 'Fare visita alla nonna',
                 done: false
               },
               {
-                text: 'edo',
-                done: false
+                text: 'Aperitivo al bar',
+                done: true
               },
               {
-                text: 'rick',
+                text: 'Guardare un film',
                 done: false
               },
 
