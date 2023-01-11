@@ -26,17 +26,21 @@
                 <img src="logo_Boolean.png" alt="logo">
             </figure>
             <div class="search">
-                <input type="text" id="input-value" placeholder="Nuova task">
+                <input type="text" id="input-value" placeholder="Nuova task" v-model.trim="taskToDo">
                 <button class="add-items">Aggiungi</button>
             </div>
             <div class="content">
                 <div class="todo-container">
-                    <ul class="todo-list">
-                       <li class="item-list">Fare i compiti</li>
-                    </ul>
-                    <i class="fa-solid fa-xmark"></i>  
+                    <div v-for="(task, i) in tasks">
+                        <div class="row-task">
+                          <ul class="todo-list">
+                             <li class="item-list">{{ task.text }}</li>
+                          </ul>
+                          <i class="fa-solid fa-xmark"></i>  
+                        </div>
+                        <hr>   
+                    </div>
                 </div>
-                <hr class="line-space">
             </div>
         </div>
     </div>

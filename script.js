@@ -31,7 +31,30 @@ const app = Vue.createApp ({
     
     data(){
         return{
+           taskToDo: '', 
+           tasks: [
+              {
+                text: 'mario',
+                done: true
+              },
+              {
+                text: 'ale',
+                done: false
+              },
+              {
+                text: 'paolo',
+                done: false
+              },
+              {
+                text: 'edo',
+                done: false
+              },
+              {
+                text: 'rick',
+                done: false
+              },
 
+           ]
         }
     },
 
