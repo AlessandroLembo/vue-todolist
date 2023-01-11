@@ -58,6 +58,12 @@ const app = Vue.createApp ({
         }
     },
 
+    methods: {
+        deleteTasks(index){
+           this.tasks.splice(index, 1);
+        }
+    }
+
 
 });
 
