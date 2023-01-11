@@ -26,7 +26,7 @@
                 <img src="logo_Boolean.png" alt="logo">
             </figure>
             <div class="search">
-                <input type="text" id="input-value" placeholder="Nuova task" v-model="addTask.text">
+                <input type="text" id="input-value" placeholder="Nuova task" v-model="addTask.text" @keyup.enter="addNewTask">
                 <button class="add-items" type="button" @click="addNewTask">Aggiungi</button>
             </div>
             <div class="content">
