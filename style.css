@@ -82,6 +82,11 @@
 
 .task-done{
     text-decoration: line-through;
+    cursor: pointer;
+}
+
+.task-undone{
+    cursor: pointer;
 }
 
 .fa-solid{

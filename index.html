@@ -26,7 +26,7 @@
                 <img src="logo_Boolean.png" alt="logo">
             </figure>
             <div class="search">
-                <input type="text" id="input-value" placeholder="Nuova task" v-model="addTask.text" @keyup.enter="addNewTask">
+                <input type="text" id="input-value" placeholder="Nuova task" v-model="addTask" @keyup.enter="addNewTask">
                 <button class="add-items" type="button" @click="addNewTask">Aggiungi</button>
             </div>
             <div class="content">
@@ -36,7 +36,7 @@
                           <ul class="todo-list">
                              <li class="item-list">
                                 <span v-if="task.done" class="task-done">{{ task.text }}</span>
-                                <span v-else >{{ task.text }}</span>
+                                <span v-else class="task-undone">{{ task.text }}</span>
                             </li>
                           </ul>
                           <i class="fa-solid fa-xmark" @click="deleteTask(i)"></i>  

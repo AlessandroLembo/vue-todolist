@@ -31,10 +31,7 @@ const app = Vue.createApp ({
     
     data(){
         return{
-           addTask: {
-             text: '',
-             done: false
-           },
+           addTask: '',
            tasks: [
               {
                 text: 'Annaffiare le piante',
@@ -67,9 +64,11 @@ const app = Vue.createApp ({
         },
 
         addNewTask(){
-            this.tasks.push(this.addTask);
+          const task = {done: false, text: this.addTask};
+            this.tasks.push(task);
             this.addTask = '';
-        }
+        },
+
     }
 
 
