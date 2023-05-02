@@ -34,7 +34,7 @@
                     <div v-for="(task, i) in tasks">
                         <div class="row-task">
                           <ul class="todo-list">
-                             <li class="item-list">
+                             <li class="item-list" @click="doneUndone(i)">
                                 <span v-if="task.done" class="task-done">{{ task.text }}</span>
                                 <span v-else class="task-undone">{{ task.text }}</span>
                             </li>

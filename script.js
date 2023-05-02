@@ -69,6 +69,10 @@ const app = Vue.createApp ({
             this.addTask = '';
         },
 
+        doneUndone(i){
+          this.tasks[i].done = !this.tasks[i].done;
+        }
+
     }
 
 
